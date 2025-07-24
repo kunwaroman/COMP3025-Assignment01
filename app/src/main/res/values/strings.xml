@@ -3,4 +3,7 @@
     <string name="movie_finder_title">Movie Finder</string>
     <string name="search_hint">Search movies (e.g. Batman)</string>
     <string name="search_button">Search</string>
+    <string name="back_to_search">Back to Search</string>
+    <string name="movie_poster">Movie Poster</string>
+
 </resources>
