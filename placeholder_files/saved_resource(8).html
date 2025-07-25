@@ -1,0 +1,141 @@
+
+<!-- saved from url=(0030)https://csync.smilewanted.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./decode_consent.js" type="text/javascript" async=""></script><script>
+(function(){
+
+    function docReady(fn) {
+        if(document.readyState === "complete" || document.readyState === "interactive"){
+            setTimeout(fn, 1);
+        }else{
+            document.addEventListener("DOMContentLoaded", fn);
+        }
+    }
+
+    function getSearchParameters() {
+        var prmstr = window.location.search.substr(1);
+        return prmstr != null && prmstr != "" ? transformToAssocArray(prmstr) : {};
+    }
+
+    function loadAsyncScript(src, callback){
+        var script = document.createElement('script');
+        script.src = src;
+        script.type = 'text/javascript';
+        script.async = true;
+        if(callback != null){
+            if (script.readyState) { // IE, incl. IE9
+                script.onreadystatechange = function() {
+                    if (script.readyState == "loaded" || script.readyState == "complete") {
+                        script.onreadystatechange = null;
+                        callback();
+                    }
+                };
+            } else {
+                script.onload = function() { // Other browsers
+                    callback();
+                };
+            }
+        }
+        a=document.getElementsByTagName('script')[0];
+        if(a){
+            a.parentNode.insertBefore(script,a);
+        }
+    }
+
+    function transformToAssocArray( prmstr ) {
+        var params = {};
+        var prmarr = prmstr.split("&");
+        for ( var i = 0; i < prmarr.length; i++) {
+            var tmparr = prmarr[i].split("=");
+            params[tmparr[0]] = tmparr[1];
+        }
+        return params;
+    }
+
+    function create_cookie_sync(url){
+        var ifrm = document.createElement("iframe");
+        ifrm.src = url;
+        ifrm.scrolling = "no";
+        ifrm.frameBorder = 0;
+        ifrm.width = 0;
+        ifrm.height = 0;
+        ifrm.style.margin = 0;
+        ifrm.style.padding = 0;
+        ifrm.style.display = "none";
+        ifrm.style.width = "0px";
+        ifrm.style.height = "0px";
+        document.body.append(ifrm);
+    }
+
+    function call_cookies_sync(){
+        docReady(function() {
+            var count_cookie_sync = 0;
+
+            create_cookie_sync("https://csync.smilewanted.com/drop_cookie_sw.php");
+
+            if(output_list_cookies_sync.length > 0){
+                output_list_cookies_sync.forEach(function(cookie_sync_url){
+                    setTimeout(function(){
+
+                        cookie_sync_url = cookie_sync_url.replaceAll('[USER_ID_SW]', '8859764d73bc9a6334c56a5c5c0e8942');
+                        cookie_sync_url = cookie_sync_url.replaceAll('[GDPR_APPLIES]', gdpr_applies);
+                        cookie_sync_url = cookie_sync_url.replaceAll('[GDPR_CONSENT_STRING]', consent_string);
+
+                        create_cookie_sync(cookie_sync_url);
+                    }, 50*count_cookie_sync);
+
+                    count_cookie_sync++;
+                });
+            }
+        });
+    }
+
+    var list_cookies_sync = {"eskimi":{"order":2,"redirect_url":"https:\/\/ittpx.eskimi.com\/sync?sp_id=148&gdpr=[GDPR_APPLIES]&gdpr_consent=[GDPR_CONSENT_STRING]"},"adaptmx":{"order":3,"redirect_url":"https:\/\/sync.a-mo.net\/cchain?gdpr=[GDPR_APPLIES]&gdpr_consent=[GDPR_CONSENT_STRING]&cb=https%3A%2F%2Fcsync.smilewanted.com%2Fset_partner_userid_get%2Fadaptmx%2F%24UID"},"admatic_autres":{"order":5,"redirect_url":"https:\/\/dsp-service.admatic.de\/cookie_sync?r=https%3A%2F%2Fcsync.smilewanted.com%2Fset_partner_userid_get%2Fadmatic_autres%2F%24%7BUSER_ID%7D"},"adaptmx_us":{"order":6,"redirect_url":"https:\/\/sync.a-mo.net\/cchain?gdpr=[GDPR_APPLIES]&gdpr_consent=[GDPR_CONSENT_STRING]&cb=https%3A%2F%2Fcsync.smilewanted.com%2Fset_partner_userid_get%2Fadaptmx_us%2F%24UID"},"vistars":{"order":7,"redirect_url":"https:\/\/cpm.vistarsagency.com\/user-sync?zone=271694&t=image&gdpr=[GDPR_APPLIES]&gdpr_consent=[GDPR_CONSENT_STRING]&r=https%3A%2F%2Fcsync.smilewanted.com%2Fset_partner_userid_get%2Fvistars%2F%7BUID%7D"},"appnexus":{"order":9,"redirect_url":"https:\/\/secure.adnxs.com\/getuid?https:\/\/csync.smilewanted.com\/set_partner_userid_get\/appnexus\/$UID?gdpr=[GDPR_APPLIES]&gdpr_consent=[GDPR_CONSENT_STRING]"},"sharethrough":{"order":13,"redirect_url":"https:\/\/match.sharethrough.com\/universal\/v1?supply_id=GmfSCHMu&gdpr=[GDPR_APPLIES]&gdpr_consent=[GDPR_CONSENT_STRING]"},"sovrn":{"order":14,"redirect_url":"https:\/\/ap.lijit.com\/pixel?gdpr=[GDPR_APPLIES]&gdpr_consent=[GDPR_CONSENT_STRING]&redir=https%3A%2F%2Fcsync.smilewanted.com%2Fset_partner_userid_get%2Fsovrn%2F%24UID"},"adform":{"order":17,"redirect_url":"https:\/\/cm.adform.net\/cookie?redirect_url=https%3A%2F%2Fcsync.smilewanted.com%2Fset_partner_userid_get%2Fadform%2F%24UID"},"smaato":{"order":18,"redirect_url":"https:\/\/s.ad.smaato.net\/i\/?adExInit=smile&gdpr=[GDPR]&gdpr_consent=[GDPR_CONSENT]&redir=https%3A%2F%2Fcsync.smilewanted.com%2Fset_partner_userid_get%2Fsmaato%2F%24UID "},"loopme":{"order":20,"redirect_url":"https:\/\/csync.loopme.me\/?pubid=11468&gdpr=[GDPR_APPLIES]&gdpr_consent=[GDPR_CONSENT_STRING]&redirect=https%3A%2F%2Fcsync.smilewanted.com%2Fset_partner_userid_get%2Floopme%2F{viewer_token}"},"rtbhouse":{"order":21,"redirect_url":"https:\/\/creativecdn.com\/cm-notify?pi=smilewanted"},"freewheel":{"order":23,"redirect_url":"https:\/\/ads.stickyadstv.com\/user-matching?id=3602&gdpr=[GDPR_APPLIES]&gdpr_consent=[GDPR_CONSENT_STRING]"},"smartyads":{"order":24,"redirect_url":"https:\/\/us.ck-ie.com\/smw888.gif?gdpr=[GDPR_APPLIES]&gdpr_consent=[GDPR_CONSENT_STRING]&us_privacy={$USPrivacy}&coppa={$COPPA}&puid={$PARTNER_UID}"},"richaudience":{"order":25,"redirect_url":"https:\/\/sync.richaudience.com\/f7872c90c5d3791e2b51f7edce1a0a5d\/?p=ns9qrKJLKD&consentString=[GDPR_CONSENT_STRING]&r=https%3A%2F%2Fcsync.smilewanted.com%2Fset_partner_userid_get%2Frichaudience%2F%5BPDID%5D"},"unruly":{"order":26,"redirect_url":"https:\/\/sync.1rx.io\/usersync2\/rmpssp?sub=smilewanted"},"betweenx":{"order":27,"redirect_url":"https:\/\/ads.betweendigital.com\/match?bidder_id=45128&callback_url=https%3A%2F%2Fcsync.smilewanted.com%2Fset_partner_userid_get%2Fbetweenx%2F${USER_ID}"},"vidoomyvideo":{"order":30,"redirect_url":"https:\/\/vid.vidoomy.com\/sync?gdpr=[GDPR_APPLIES]&gdpr_consent=[GDPR_CONSENT_STRING]&us_privacy=&redirect=https%3A%2F%2Fcsync.smilewanted.com%2Fset_partner_userid_get%2Fvidoomyvideo%2F%7B%7BVID%7D%7D"},"betweenx2":{"order":32,"redirect_url":"https:\/\/ads.betweendigital.com\/match?bidder_id=45128&callback_url=https%3A%2F%2Fcsync.smilewanted.com%2Fset_partner_userid_get%2Fbetweenx2%2F${USER_ID}"},"illumin":{"order":33,"redirect_url":"https:\/\/cs.admanmedia.com\/c899400112bd5b9243b3993d9a074653.gif?puid=[UID]&redir=https%3A%2F%2Fcsync.smilewanted.com%2Fset_partner_userid_get%2Fillumin%2F%5BUID%5D&gdpr=[GDPR_APPLIES]&gdpr_consent=[GDPR_CONSENT_STRING]"},"appnexus_prebid_server":{"order":34,"redirect_url":"https:\/\/csync.smilewanted.com\/getuid?source=prebid-server&gdpr=[GDPR_APPLIES]&gdpr_consent=[GDPR_CONSENT_STRING]&us_privacy=&redirect=https%3A%2F%2Fib.adnxs.com%2Fprebid%2Fsetuid%3Fbidder%3Dsmilewanted%26gdpr%3D[GDPR_APPLIES]%26gdpr_consent%3D[GDPR_CONSENT_STRING]%26f%3Di%26uid%3D%24UID"}};
+
+    var output_list_cookies_sync = [];
+
+    for(let [key, value] of Object.entries(list_cookies_sync)){
+        output_list_cookies_sync[value.order] = value.redirect_url;
+    }
+
+    var gdpr_applies = 0;
+    var consent_string = '';
+    var params = getSearchParameters();
+    var force_calls = false;
+
+    
+    setTimeout(function(){
+
+        try{
+            if(typeof top.window.__tcfapi !== 'undefined'){
+                top.window.__tcfapi('getTCData', 2, function (tcData, success){
+                    if(success){
+                        gdpr_applies = tcData.gdprApplies ? 1 : 0;
+                        consent_string = tcData.tcString;
+                    }
+                });
+            }else{
+                if(params.gdpr && params.gdpr_consent){
+                    gdpr_applies = params.gdpr;
+                    consent_string = params.gdpr_consent;
+                }else{
+                    force_calls = true;
+                }
+            }
+        }catch(e){
+            if(params.gdpr && params.gdpr_consent){
+                gdpr_applies = params.gdpr;
+                consent_string = params.gdpr_consent;
+            }else{
+                force_calls = true;
+            }
+        }
+
+        loadAsyncScript("https://static.smilewanted.com/js/decode_consent/decode_consent.js", function() {
+            if((sw_consent.vendor_allowed(consent_string, 639) && sw_consent.purpose_allowed(consent_string, 1) && sw_consent.purpose_allowed(consent_string, 2)) || force_calls){
+                call_cookies_sync();
+            }
+        });
+    }, 50);
+})();
+
+</script></head><body marginwidth="0" marginheight="0"><iframe src="./drop_cookie_sw.html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe><iframe src="./sync.html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe><iframe src="./cchain.html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe><iframe src="./cookie_sync.html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe><iframe src="./cchain(1).html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe><iframe src="./user-sync.html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe><iframe src="./getuid.html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe><iframe src="./v1.html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe><iframe src="./pixel.html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe><iframe src="./cookie.html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe><iframe src="./saved_resource(1).html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe><iframe src="./saved_resource(2).html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe><iframe src="./cm-notify.html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe><iframe src="./user-matching.html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe><iframe src="./smw888.html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe><iframe src="./saved_resource(3).html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe><iframe src="./rmpssp.html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe><iframe src="./match.html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe><iframe src="./sync(1).html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe><iframe src="./match(1).html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe><iframe src="./c899400112bd5b9243b3993d9a074653.html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe><iframe src="./getuid(1).html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe></body></html>
