@@ -68,3 +68,5 @@ class MovieViewModel : ViewModel() {
         coroutineScope.cancel()
     }
 }
+
+//References: My app was crashing while handling API call so I had used some references from the W3School and the web.
