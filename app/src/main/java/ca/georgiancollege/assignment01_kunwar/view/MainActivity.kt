@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import ca.georgiancollege.assignment01_kunwar.adapter.MovieAdapter
 import ca.georgiancollege.assignment01_kunwar.databinding.ActivityMainBinding
 import ca.georgiancollege.assignment01_kunwar.viewmodel.MovieViewModel
 
