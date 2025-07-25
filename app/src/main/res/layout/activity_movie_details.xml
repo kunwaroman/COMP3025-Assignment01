@@ -2,7 +2,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/padding_normal">
+    android:padding="@dimen/padding_normal"
+    android:background="@color/background_color">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,7 +15,8 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/poster_height"
             android:scaleType="fitCenter"
-            android:contentDescription="@string/movie_poster" />
+            android:contentDescription="@string/movie_poster"
+            android:layout_marginTop="@dimen/margin_top_large"/>
 
 
         <TextView

@@ -19,7 +19,7 @@ class MovieViewModel : ViewModel() {
     fun searchMovies(query: String, apiKey: String) {
         coroutineScope.launch {
             try {
-                val url = URL("https://www.omdbapi.com/?apikey=$apiKey&s=${query.replace(" ", "+")}")
+                val url = URL("https://www.omdbapi.com/?apikey=$apiKey&s=${query.replace(" ", "+")}&type=movie")
                 val connection = url.openConnection() as HttpURLConnection
                 connection.connectTimeout = 5000
                 connection.readTimeout = 5000

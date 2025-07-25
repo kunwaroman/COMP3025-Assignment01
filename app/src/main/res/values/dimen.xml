@@ -13,6 +13,9 @@
     <dimen name="spacing_small">8dp</dimen>
     <dimen name="card_corner_radius">12dp</dimen>
     <dimen name="card_elevation">4dp</dimen>
-
+    <dimen name="margin_top_large">32dp</dimen>
+    <dimen name="paddingTop">8dp</dimen>
+    <dimen name="paddingButtom">8dp</dimen>
+    <dimen name="translation_z">2dp</dimen>
 
 </resources>
