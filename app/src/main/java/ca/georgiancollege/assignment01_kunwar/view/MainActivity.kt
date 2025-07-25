@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import ca.georgiancollege.assignment01_kunwar.adapter.MovieAdapter
 import ca.georgiancollege.assignment01_kunwar.databinding.ActivityMainBinding
 import ca.georgiancollege.assignment01_kunwar.viewmodel.MovieViewModel
 
@@ -18,20 +19,18 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Setup RecyclerView layout manager
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
 
-        // Search button click triggers movie search
+        // Observe movies LiveData once
+        viewModel.movies.observe(this) { movieList ->
+            binding.recyclerView.adapter = MovieAdapter(movieList)
+        }
+
         binding.searchButton.setOnClickListener {
             val query = binding.searchEditText.text.toString().trim()
             if (query.isNotEmpty()) {
                 viewModel.searchMovies(query, apiKey)
             }
-        }
-
-        // Observe movies LiveData and update RecyclerView adapter
-        viewModel.movies.observe(this) { movieList ->
-            binding.recyclerView.adapter = MovieAdapter(movieList)
         }
     }
 }
